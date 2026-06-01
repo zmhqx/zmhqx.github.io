@@ -1,0 +1,295 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>线性代数 | baiyu's blog</title><meta name="author" content="baiyu"><meta name="copyright" content="baiyu"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta property="og:type" content="article">
+<meta property="og:title" content="线性代数">
+<meta property="og:url" content="https://zmhqx.github.io/2026/06/01/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/index.html">
+<meta property="og:site_name" content="baiyu&#39;s blog">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://zmhqx.github.io/img/cover_2.jpg">
+<meta property="article:published_time" content="2026-06-01T12:05:13.000Z">
+<meta property="article:modified_time" content="2026-06-01T12:05:49.707Z">
+<meta property="article:author" content="baiyu">
+<meta property="article:tag" content="考研">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://zmhqx.github.io/img/cover_2.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "线性代数",
+  "url": "https://zmhqx.github.io/2026/06/01/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/",
+  "image": "https://zmhqx.github.io/img/cover_2.jpg",
+  "datePublished": "2026-06-01T12:05:13.000Z",
+  "dateModified": "2026-06-01T12:05:49.707Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "baiyu",
+      "url": "https://zmhqx.github.io"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://zmhqx.github.io/2026/06/01/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><meta name="google-site-verification" content="L9o6YcQ_J9FZTzPCzuo8vq3sXgbiXwGkPdciJwygoAI"/><meta name="msvalidate.01" content="50E8606BBFDD6BAB456B6620A55BEF82"/><link rel="stylesheet" href="/css/index.css?v=5.5.4"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.json","preload":false,"top_n_per_article":1,"unescape":false,"pagination":{"enable":false,"hitsPerPage":8},"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.13.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '线性代数',
+  isHighlightShrink: false,
+  isToc: false,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/style.css"><meta name="generator" content="Hexo 8.1.1"></head><body><div class="bg-animation" id="web_bg" style="background-image: url(/img/background.png);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">13</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">14</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/./img/cover_2.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><img class="site-icon" src="/./img/logo.jpg" alt="Logo"><span class="site-name">baiyu's blog</span></a><a class="nav-page-title" href="/"><span class="site-name">线性代数</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友情链接</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">线性代数</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-06-01T12:05:13.000Z" title="发表于 2026-06-01 20:05:13">2026-06-01</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-06-01T12:05:49.707Z" title="更新于 2026-06-01 20:05:49">2026-06-01</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p><img src="/../img/Screenshot_20260531_014854_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260531_014854_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260531_015503_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260531_015503_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260531_184705_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260531_184705_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260531_191354_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260531_191354_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260531_192648_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260531_192648_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260531_190118_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260531_190118_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260531_190318_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260531_190318_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260531_191110_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260531_191110_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260531_191840_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260531_191840_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260531_194041_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260531_194041_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260531_194615_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260531_194615_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260531_195003_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260531_195003_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260531_195133_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260531_195133_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260531_195757_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260531_195757_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260531_200449_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260531_200449_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260531_202446_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260531_202446_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260531_203131_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260531_203131_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260531_203651_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260531_203651_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260529_105458_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260529_105458_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260529_105617_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260529_105617_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260529_105636_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260529_105636_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260529_105833_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260529_105833_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260529_165759_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260529_165759_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260530_030259_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260530_030259_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260530_030322_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260530_030322_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260530_030626_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260530_030626_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260530_030639_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260530_030639_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260530_032612_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260530_032612_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260531_203222_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260531_203222_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260531_203805_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260531_203805_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260531_205022_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260531_205022_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260529_110016_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260529_110016_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260529_110104_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260529_110104_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260529_110754_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260529_110754_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260529_111229_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260529_111229_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260529_111849_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260529_111849_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260529_112328_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260529_112328_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260529_112625_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260529_112625_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260529_164244_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260529_164244_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260529_170244_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260529_170244_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260529_172025_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260529_172025_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260529_174017_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260529_174017_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260529_174035_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260529_174035_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260529_181143_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260529_181143_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260529_181220_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260529_181220_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260529_181750_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260529_181750_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260524_204454_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260524_204454_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260524_204527_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260524_204527_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260524_204619_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260524_204619_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260524_205516_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260524_205516_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260524_205625_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260524_205625_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260524_205646_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260524_205646_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260524_205729_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260524_205729_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260524_205746_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260524_205746_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260524_210155_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260524_210155_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260524_210207_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260524_210207_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260524_211532_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260524_211532_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260524_212032_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260524_212032_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260524_212112_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260524_212112_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260524_213115_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260524_213115_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260524_213332_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260524_213332_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260529_182532_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260529_182532_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260521_174032_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260521_174032_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260521_174617_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260521_174617_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260521_174629_tv_danmaku_bili_UnitedPlaylistActivity_edit_274118957675872.jpg" alt="Screenshot_20260521_174629_tv_danmaku_bili_UnitedPlaylistActivity_edit_274118957675872"></p>
+<p><img src="/../img/Screenshot_20260524_213444_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260524_213444_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260524_213532_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260524_213532_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260527_163100_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260527_163100_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260527_163300_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260527_163300_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260527_164013_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260527_164013_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260527_164816_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260527_164816_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260527_164821_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260527_164821_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260527_165142_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260527_165142_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260527_170018_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260527_170018_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260527_170059_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260527_170059_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260527_170154_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260527_170154_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260527_171430_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260527_171430_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260527_172103_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260527_172103_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260521_175331_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260521_175331_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260521_175403_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260521_175403_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260521_175425_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260521_175425_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260521_175814_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260521_175814_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260521_175933_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260521_175933_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260521_180054_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260521_180054_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260521_180416_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260521_180416_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260521_181817_tv_danmaku_bili_UnitedPlaylistActivity_edit_275929852282057.jpg" alt="Screenshot_20260521_181817_tv_danmaku_bili_UnitedPlaylistActivity_edit_275929852282057"></p>
+<p><img src="/../img/Screenshot_20260521_211215_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260521_211215_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260521_211330_tv_danmaku_bili_UnitedPlaylistActivity_edit_286800208651320.jpg" alt="Screenshot_20260521_211330_tv_danmaku_bili_UnitedPlaylistActivity_edit_286800208651320"></p>
+<p><img src="/../img/Screenshot_20260523_170051_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260523_170051_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260523_170213_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260523_170213_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260523_170222_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260523_170222_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260523_170227_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260523_170227_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260523_170243_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260523_170243_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260523_170454_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260523_170454_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260523_172350_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260523_172350_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260523_172630_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260523_172630_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260523_171420_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260523_171420_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260523_171602_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260523_171602_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260523_172251_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260523_172251_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260523_172752_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260523_172752_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260523_172755_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260523_172755_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260523_173219_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260523_173219_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260523_173237_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260523_173237_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260523_173901_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260523_173901_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260523_174203_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260523_174203_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260523_175727_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260523_175727_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260523_175856_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260523_175856_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260523_190228_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260523_190228_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260523_181827_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260523_181827_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260523_182047_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260523_182047_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260523_182148_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260523_182148_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260523_182653_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260523_182653_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260523_190222_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260523_190222_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260523_190441_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260523_190441_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260523_191931_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260523_191931_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260523_192240_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260523_192240_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260523_192817_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260523_192817_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260523_192948_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260523_192948_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260523_193214_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260523_193214_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260523_193409_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260523_193409_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260523_194808_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260523_194808_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260523_195900_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260523_195900_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260523_193801_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260523_193801_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="C:/Users/HP/Downloads/Screenshot_20260531_010111_tv_danmaku_bili_等135项文件/Screenshot_20260523_194146_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260523_194146_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260523_194550_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260523_194550_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260531_010111_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260531_010111_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260531_010919_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260531_010919_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260531_011157_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260531_011157_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260531_011732_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260531_011732_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260531_011805_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260531_011805_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260531_012940_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260531_012940_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260531_013152_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260531_013152_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260531_013744_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260531_013744_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260531_014002_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260531_014002_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+<p><img src="/../img/Screenshot_20260531_014214_tv_danmaku_bili_UnitedPlaylistActivity.jpg" alt="Screenshot_20260531_014214_tv_danmaku_bili_UnitedPlaylistActivity"></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://zmhqx.github.io">baiyu</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://zmhqx.github.io/2026/06/01/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/">https://zmhqx.github.io/2026/06/01/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://zmhqx.github.io" target="_blank">baiyu's blog</a>！</span></div></div><div class="tag_share"><div class="post-share"><div class="social-share" data-image="/./img/cover_2.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related full-width" href="/2026/06/01/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/" title="操作系统复习资料"><img class="cover" src="/./img/cover_3.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">操作系统复习资料</div></div><div class="info-2"><div class="info-item-1">计算机系统概述操作系统的基本概念操作系统发展历程操作系统运行环境操作系统结构操作系统引导虚拟机附中断相关</div></div></div></a></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/avatar.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">baiyu</div><div class="author-info-description">考研ing</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">13</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">14</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">2</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/xxxxxx"><i class="fab fa-github"></i><span>关注窝</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/zmhqx" target="_blank" title="Github"><i class="fab fa-github" style="color: #hdhfbb;"></i></a><a class="social-icon" href="mailto:byu153616@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #000000;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">做的很简陋，凑合看吧</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/06/01/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" title="线性代数"><img src="/./img/cover_2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="线性代数"/></a><div class="content"><a class="title" href="/2026/06/01/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/" title="线性代数">线性代数</a><time datetime="2026-06-01T12:05:13.000Z" title="发表于 2026-06-01 20:05:13">2026-06-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/06/01/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/" title="操作系统复习资料"><img src="/./img/cover_3.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="操作系统复习资料"/></a><div class="content"><a class="title" href="/2026/06/01/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%A4%8D%E4%B9%A0%E8%B5%84%E6%96%99/" title="操作系统复习资料">操作系统复习资料</a><time datetime="2026-06-01T11:56:35.000Z" title="发表于 2026-06-01 19:56:35">2026-06-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/05/13/%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F/" title="嵌入式系统"><img src="/./img/cover_1.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="嵌入式系统"/></a><div class="content"><a class="title" href="/2026/05/13/%E5%B5%8C%E5%85%A5%E5%BC%8F%E7%B3%BB%E7%BB%9F/" title="嵌入式系统">嵌入式系统</a><time datetime="2026-05-13T06:34:59.000Z" title="发表于 2026-05-13 14:34:59">2026-05-13</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/05/02/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/" title="软件测试"><img src="/./img/cover_2.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="软件测试"/></a><div class="content"><a class="title" href="/2026/05/02/%E8%BD%AF%E4%BB%B6%E6%B5%8B%E8%AF%95/" title="软件测试">软件测试</a><time datetime="2026-05-01T16:27:37.000Z" title="发表于 2026-05-02 00:27:37">2026-05-02</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/05/01/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B8%8E%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/" title="设计模式与体系结构"><img src="/./img/cover_3.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="设计模式与体系结构"/></a><div class="content"><a class="title" href="/2026/05/01/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B8%8E%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/" title="设计模式与体系结构">设计模式与体系结构</a><time datetime="2026-05-01T10:14:46.000Z" title="发表于 2026-05-01 18:14:46">2026-05-01</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2026 By baiyu</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.1</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.4</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4"></script><script src="/js/main.js?v=5.5.4"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><i class="fas fa-spinner fa-pulse" id="loading-status" hidden="hidden"></i><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据加载中</span></div><div class="local-search-input"><input placeholder="搜索文章" type="text"/></div><hr/><div id="local-search-results"></div><div class="ais-Pagination" id="local-search-pagination" style="display:none;"><ul class="ais-Pagination-list"></ul></div><div id="local-search-stats"></div></div><div id="search-mask"></div><script src="/js/search/local-search.js?v=5.5.4"></script></div></div></body></html>
